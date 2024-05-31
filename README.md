@@ -38,3 +38,26 @@ Make any necessary assumptions to complete the task, and explicitly state them i
 - The focus is on architectural choices rather than end results.
 - Provide architectural design diagrams.
 - You may implement just the interfaces for some functionalities if time is constrained.
+
+==================================================================== Architecture & Design Details =======================================================================
+
+**Assumptions:**
+1. Serving Engine: We'll use VLLM as the serving engine.
+2. Models: We'll select llama2:7b or llama2:7b-instruct from HuggingFace.
+3. GPUs: We have 2 GPUs, each with 24GB of RAM. ( I will check on this if feasible without paying with free credits )
+4. Serving Engine Constraints: Each instance of the serving engine can run only one model at a time.
+5. Environment: The solution will be implemented in Python using Gen-AI frameworks
+
+**Core Components of HLD ( High Level Design )**
+
+- API Server
+- Model Manager
+- Model Cache
+- Serving Engine
+- Scheduler
+- Fault Tolerance
+
+  
+
+
+  

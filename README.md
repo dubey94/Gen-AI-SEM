@@ -9,27 +9,32 @@ This project involves creating a Service Engine Manager (SEM) for managing multi
    - Choose any two variants of Llama models (e.g., llama2:7b) or fine-tuned Llama-based models (e.g., llama2:7b-instruct) from a model repository (e.g., HuggingFace).
    - Select a serving engine (e.g., Vllm).
   
-  # Develop a Serving Engine Manager:
+# Develop a Serving Engine Manager:
 
-  Main Functionality:
-  Cache Models: Given a list of model names (n > 1), cache them from the model repository.
-  API Server: Run a simple API server with a /generate endpoint that receives the model name and prompt, returning the generation result from the serving engine (Note: the model should already be running within the serving engine).
-  Add and Remove Methods: Implement methods to add (i.e., run) a model or remove (i.e., stop) a running model.
-  Scheduler:
-  Add Functionality: If there is not enough available GPU memory, wait until a model is removed. Check available resources (e.g., GPU memory) every 10 seconds.
-  Two-Level Scheduling:
-  Serving Engine Scheduler: Schedules generation tasks.
-  Serving Engine Manager Scheduler: Schedules models to be run with available resources.
-  BONUS Implementation:
+  **Main Functionality:**
+   - Cache Models: Given a list of model names (n > 1), cache them from the model repository.
+   - API Server: Run a simple API server with a "/generate" endpoint that receives the model name and prompt, returning the generation result from the serving engine (Note: the model should already be running within the serving engine).
+   - Add and Remove Methods: Implement methods to add (i.e., run) a model or remove (i.e., stop) a running model.
+  
+ **Scheduler:**
+  - Add Functionality: If there is not enough available GPU memory, wait until a model is removed. Check available resources (e.g., GPU memory) every 10 seconds.
+  - Two-Level Scheduling:
+    - Serving Engine Scheduler: Schedules generation tasks.
+    - Serving Engine Manager Scheduler: Schedules models to be run with available resources.
+      
+BONUS Implementation:
 
-Fault Handling: Implement a solution to handle situations where a model running on the selected serving engine fails. The goal is to ensure generation results are sent back for user prompts.
-Graceful Shutdown: Implement a method to gracefully shut down a model that is no longer supported by the serving engine manager.
+- Fault Handling: Implement a solution to handle situations where a model running on the selected serving engine fails. The goal is to ensure generation results are sent back for user prompts.
+- Graceful Shutdown: Implement a method to gracefully shut down a model that is no longer supported by the serving engine manager.
 Dynamic Model Addition: Add a new model to the serving engine manager without stopping the whole system (assuming the serving engine supports the new model).
-Constraints
+
+**Constraints**:
 Hardware: 2 GPUs, each with 24GB RAM.
-Assumptions
+
+**Assumptions**:
 Make any necessary assumptions to complete the task, and explicitly state them in your solution.
-Notes
-The focus is on architectural choices rather than end results.
-Provide architectural design diagrams.
-You may implement just the interfaces for some functionalities if time is constrained.
+
+**Notes**
+- The focus is on architectural choices rather than end results.
+- Provide architectural design diagrams.
+- You may implement just the interfaces for some functionalities if time is constrained.

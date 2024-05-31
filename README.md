@@ -4,22 +4,23 @@
 This project involves creating a Service Engine Manager (SEM) for managing multiple variants of Language models. Below are the detailed requirements:
 
 # Requirements
-Select Models and Serving Engine:
+  Select Models and Serving Engine:
+  
+   - Choose any two variants of Llama models (e.g., llama2:7b) or fine-tuned Llama-based models (e.g., llama2:7b-instruct) from a model repository (e.g., HuggingFace).
+   - Select a serving engine (e.g., Vllm).
+  
+  # Develop a Serving Engine Manager:
 
-Choose any two variants of Llama models (e.g., llama2:7b) or fine-tuned Llama-based models (e.g., llama2:7b-instruct) from a model repository (e.g., HuggingFace).
-Select a serving engine (e.g., Vllm).
-Develop a Serving Engine Manager:
-
-Main Functionality:
-Cache Models: Given a list of model names (n > 1), cache them from the model repository.
-API Server: Run a simple API server with a /generate endpoint that receives the model name and prompt, returning the generation result from the serving engine (Note: the model should already be running within the serving engine).
-Add and Remove Methods: Implement methods to add (i.e., run) a model or remove (i.e., stop) a running model.
-Scheduler:
-Add Functionality: If there is not enough available GPU memory, wait until a model is removed. Check available resources (e.g., GPU memory) every 10 seconds.
-Two-Level Scheduling:
-Serving Engine Scheduler: Schedules generation tasks.
-Serving Engine Manager Scheduler: Schedules models to be run with available resources.
-BONUS Implementation:
+  Main Functionality:
+  Cache Models: Given a list of model names (n > 1), cache them from the model repository.
+  API Server: Run a simple API server with a /generate endpoint that receives the model name and prompt, returning the generation result from the serving engine (Note: the model should already be running within the serving engine).
+  Add and Remove Methods: Implement methods to add (i.e., run) a model or remove (i.e., stop) a running model.
+  Scheduler:
+  Add Functionality: If there is not enough available GPU memory, wait until a model is removed. Check available resources (e.g., GPU memory) every 10 seconds.
+  Two-Level Scheduling:
+  Serving Engine Scheduler: Schedules generation tasks.
+  Serving Engine Manager Scheduler: Schedules models to be run with available resources.
+  BONUS Implementation:
 
 Fault Handling: Implement a solution to handle situations where a model running on the selected serving engine fails. The goal is to ensure generation results are sent back for user prompts.
 Graceful Shutdown: Implement a method to gracefully shut down a model that is no longer supported by the serving engine manager.

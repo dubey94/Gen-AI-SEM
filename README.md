@@ -1,9 +1,9 @@
-# Gen-AI SEM
+# Gen-AI : SEM
 
-#Description
+# Description
 This project involves creating a Service Engine Manager (SEM) for managing multiple variants of Language models. Below are the detailed requirements:
 
-#Requirements
+# Requirements
 Select Models and Serving Engine:
 
 Choose any two variants of Llama models (e.g., llama2:7b) or fine-tuned Llama-based models (e.g., llama2:7b-instruct) from a model repository (e.g., HuggingFace).

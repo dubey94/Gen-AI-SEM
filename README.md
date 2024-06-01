@@ -55,9 +55,24 @@ Make any necessary assumptions to complete the task, and explicitly state them i
 - Model Cache
 - Serving Engine
 - Scheduler
-- Fault Tolerance
 
-  
+  <img width="862" alt="image" src="https://github.com/dubey94/Gen-AI-SEM/assets/38418826/332725ae-5504-471e-92a4-568c4f427c94">
+
+  ![image](https://github.com/dubey94/Gen-AI-SEM/assets/38418826/6e007f77-da37-4dbd-9c84-187fd8c9fbac)
+
+  <img width="826" alt="image" src="https://github.com/dubey94/Gen-AI-SEM/assets/38418826/7cdb8072-f896-4015-9542-8af85a06f1cf">
+
+  <img width="946" alt="image" src="https://github.com/dubey94/Gen-AI-SEM/assets/38418826/00d239b3-d7cf-4978-b186-a97dc616c4b0">
 
 
-  
+  <img width="933" alt="image" src="https://github.com/dubey94/Gen-AI-SEM/assets/38418826/13f65275-d418-4ebc-8b77-8c660fcd3c63">
+
+
+  <img width="838" alt="image" src="https://github.com/dubey94/Gen-AI-SEM/assets/38418826/a86c7517-b1cd-4fb5-b448-dd2cc3b0d86f">
+
+
+   <img width="757" alt="image" src="https://github.com/dubey94/Gen-AI-SEM/assets/38418826/c004e81d-10c0-457c-94e4-b3b6d8214fe9">
+
+   <img width="856" alt="image" src="https://github.com/dubey94/Gen-AI-SEM/assets/38418826/22b23bac-4f4e-4939-96b5-7d47869bea16">
+   
+

@@ -1,4 +1,4 @@
-# Gen-AI : SEM
+# Gen-AI : ModelServe Pro
 
 # About
 This project involves creating a Service Engine Manager (SEM) for managing multiple variants of Language models. Below are the detailed requirements:

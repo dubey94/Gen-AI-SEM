@@ -1,5 +1,6 @@
 import subprocess
 import psutil
+import logging
 
 class ModelManager:
     def __init__(self):
@@ -20,3 +21,11 @@ class ModelManager:
 
     def is_model_running(self, model_name):
         return model_name in self.running_models
+
+    def monitor_models(self):
+        for model_name, process in self.running_models.items():
+            if process.poll() is not None:  # Process has terminated
+                logging.error(f"Model {model_name} has failed. Restarting...")
+                self.stop_model(model_name)
+                # Restart the model on the same GPU (assuming the GPU ID is known)
+                self.start_model(model_name, model_cache.cache_model(model_name), gpu_id)
